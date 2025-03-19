@@ -1,0 +1,25 @@
+<h3>Restaurant List</h3>
+<div class="divTable">
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Owner</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let r of restaurantList">
+                <td>{{r.name}}</td>
+                <td>{{r.location}}</td>
+                <td>{{r.owner}}</td>
+                <td>
+                    <div>
+                        <button (click)="r.id && DeleteRest(r.id)">Delete</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

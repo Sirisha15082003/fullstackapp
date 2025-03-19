@@ -1,0 +1,25 @@
+<h3>User List</h3>
+<div class="divTable">
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Location</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let r of userList">
+                <td>{{r.name}}</td>
+                <td>{{r.role}}</td>
+                <td>{{r.location}}</td>
+                <td>
+                    <div>
+                        <button (click)="DeleteUser(r.id)">Delete</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

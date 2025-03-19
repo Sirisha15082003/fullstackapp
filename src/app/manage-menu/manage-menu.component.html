@@ -1,0 +1,47 @@
+<p>manage-menu works!</p>
+<h3>Menu</h3>
+<div class="divTable">
+    <table>
+        <thead>
+            <tr>
+                <th>Restaurant ID</th>
+                <th>DishName</th>
+                <th>DishType</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let r of MenuList">
+                <td>{{r.rid}}</td>
+                <td>{{r.dishname}}</td>
+                <td>{{r.dishtype}}</td>
+                <td>
+                    {{r.price}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <hr/>
+    <h2>Add New Menu Item</h2>
+    <form [formGroup]="frmMenuGroup" (ngSubmit)="OnNewDishAdd()">
+        <div>
+            <label for="menuName">Name:</label>
+            <input type="text" formControlName="dishName"/>
+        </div>
+        <div>
+            <label for="dishType">Type:</label>
+            <select   formControlName="dishType">
+                <option value="SELECT">Select</option>
+                <option value="VEG">VEG</option>
+                <option value="NON-VEG">NON-VEG</option>
+            </select>
+        </div>
+        <div>
+            <label for="dishPrice">Price:</label>
+            <input type="number" min="10" formControlName="dishPrice"/>
+        </div>
+        <div>
+            <button type="submit">Add New Dish</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,9 @@
+<p>userlist works!</p>
+<div *ngFor="let uobj of namesArray">
+    <div *ngIf="uobj.age > 17">
+<app-useritem [udata]="uobj"></app-useritem>
+</div>
+</div>
+<div>
+    <app-add-user (AddUserEvent)="AddUserToArray($event)"></app-add-user>
+</div>

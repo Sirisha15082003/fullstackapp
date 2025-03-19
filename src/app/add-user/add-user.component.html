@@ -1,0 +1,6 @@
+<h2>Add New User</h2>
+<input type="text" name="uname" [(ngModel)]="uname" placeholder="Enter Name" (keyup)="OnTextChange()" />{{charsRemaing}}
+<br>
+<input type="number" name="uage" [(ngModel)]="uage" placeholder="Enter Age" min="1" max="60" step="1"/>
+<br>
+<input type="button" value="Add New user" (click)="AddNewUser()">
